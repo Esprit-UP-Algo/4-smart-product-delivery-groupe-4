@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaClasse</class>
+ <widget class="QWidget" name="MaClasse">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MaClasse</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>711</width>
+     <height>491</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>GroupBox</string>
+   </property>
+   <widget class="QPushButton" name="pushButtonemp">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>121</y>
+      <width>181</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>gestion employe</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonmedic">
+    <property name="geometry">
+     <rect>
+      <x>309</x>
+      <y>121</y>
+      <width>211</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>gestion medicament</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

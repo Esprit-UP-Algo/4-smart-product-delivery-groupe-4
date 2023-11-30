@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1414</width>
+    <height>784</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1361</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <widget class="QWidget" name="tab_ajout">
+     <attribute name="title">
+      <string>Ajout d'employé</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_pdf">
+      <property name="geometry">
+       <rect>
+        <x>1300</x>
+        <y>70</y>
+        <width>31</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/pdff.png</normaloff>:/image/pdff.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>110</y>
+        <width>941</width>
+        <height>192</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>80</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Liste des Employés</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_stat">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>310</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/371503204_359567056571197_1363557144046148477_n.png</normaloff>:/image/371503204_359567056571197_1363557144046148477_n.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>1210</x>
+        <y>310</y>
+        <width>131</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Date d'embauche</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Salaire</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_rechcin">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>310</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/rechh.jpg</normaloff>:/image/rechh.jpg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>310</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Rechercher par CIN:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_rechcin">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>310</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_raf">
+      <property name="geometry">
+       <rect>
+        <x>1240</x>
+        <y>70</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/375767889_1072864217216991_4532432671638236276_n.png</normaloff>:/image/375767889_1072864217216991_4532432671638236276_n.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_deconect">
+      <property name="geometry">
+       <rect>
+        <x>1320</x>
+        <y>10</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/368562552_641937554818333_8561424372625997702_n.png</normaloff>:/image/368562552_641937554818333_8561424372625997702_n.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_supprimer">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>540</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/zebla.png</normaloff>:/image/zebla.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>460</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Supprimer un employé</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_dateE">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DATE D'EMB</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_modifier">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>410</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/386897313_2200416400300322_4416248776854462235_n.png</normaloff>:/image/386897313_2200416400300322_4416248776854462235_n.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_cinsupp">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>490</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_cinsupp">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CIN</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_cin">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>110</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CIN</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_salaire">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>270</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_abs">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>310</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PASSWORD</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_abs">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>310</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ABSENCE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_nom">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>150</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>NOM</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>230</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_salaire">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>270</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SALAIRE</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_cin">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>110</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_ajouter">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>410</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/image/398478943_310705501853978_8482835485654779008_n.png</normaloff>:/image/398478943_310705501853978_8482835485654779008_n.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_nom">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>150</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_prenom">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>190</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>70</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ajout d'un employé</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_mdp">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>350</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_prenom">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>190</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PRENOM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>305</y>
+        <width>56</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="image.qrc">:/image/386886621_820030416564599_8739826155038331705_n.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>5</y>
+        <width>1361</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="image.qrc">:/image/INT333.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_RFID">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>380</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>390</y>
+        <width>56</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RFID</string>
+      </property>
+     </widget>
+     <zorder>label_7</zorder>
+     <zorder>pushButton_pdf</zorder>
+     <zorder>tableView</zorder>
+     <zorder>label</zorder>
+     <zorder>pushButton_stat</zorder>
+     <zorder>comboBox</zorder>
+     <zorder>pushButton_rechcin</zorder>
+     <zorder>label_4</zorder>
+     <zorder>lineEdit_rechcin</zorder>
+     <zorder>pushButton_raf</zorder>
+     <zorder>pushButton_deconect</zorder>
+     <zorder>pushButton_supprimer</zorder>
+     <zorder>label_3</zorder>
+     <zorder>label_dateE</zorder>
+     <zorder>pushButton_modifier</zorder>
+     <zorder>lineEdit_cinsupp</zorder>
+     <zorder>label_cinsupp</zorder>
+     <zorder>label_cin</zorder>
+     <zorder>lineEdit_salaire</zorder>
+     <zorder>lineEdit_abs</zorder>
+     <zorder>label_5</zorder>
+     <zorder>label_abs</zorder>
+     <zorder>label_nom</zorder>
+     <zorder>dateEdit</zorder>
+     <zorder>label_salaire</zorder>
+     <zorder>lineEdit_cin</zorder>
+     <zorder>pushButton_ajouter</zorder>
+     <zorder>lineEdit_nom</zorder>
+     <zorder>lineEdit_prenom</zorder>
+     <zorder>label_2</zorder>
+     <zorder>lineEdit_mdp</zorder>
+     <zorder>label_prenom</zorder>
+     <zorder>label_6</zorder>
+     <zorder>lineEdit_RFID</zorder>
+     <zorder>label_8</zorder>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1414</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
