@@ -2,6 +2,7 @@
 #include "ui_widget.h"
 #include "aziz/mainwindow.h"
 #include "cherif/medicament_ui.h"
+#include "hedy/gslivmainwindow.h"
 
 
 MaClasse::MaClasse(QWidget *parent)
@@ -25,4 +26,10 @@ void MaClasse::on_pushButtonmedic_clicked()
 {
     medicamentUI = new Medicament_ui(this);
     medicamentUI->show();
+}
+
+void MaClasse::on_pushButtonliv_clicked()
+{
+    w = new GSLIVmainwindow(this);
+    w->show();
 }

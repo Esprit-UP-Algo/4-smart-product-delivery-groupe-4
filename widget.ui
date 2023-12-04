@@ -51,6 +51,19 @@
      <string>gestion medicament</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonliv">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>297</y>
+      <width>251</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>gestion livraisons</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

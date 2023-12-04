@@ -33,6 +33,7 @@ QT_CHARTS_USE_NAMESPACE
 
 #include "login.h"
 #include "ui_login.h"
+#include "widget.h"
 
 
 
@@ -524,3 +525,12 @@ void MainWindow::connect_RFID()
         }
 
     }
+
+void MainWindow::on_pushButton_back_clicked()
+{
+    this->hide();
+    MaClasse *auth= new MaClasse;
+    auth->show();
+    close();
+
+}

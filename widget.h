@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "aziz/mainwindow.h"
 #include "cherif/medicament_ui.h"
+#include "hedy/gslivmainwindow.h"
 
 
 
@@ -25,10 +26,14 @@ private slots:
     void on_pushButtonmedic_clicked();
 
 
+    void on_pushButtonliv_clicked();
+
 private:
     Ui::MaClasse *ui;
     MainWindow *employe;
     Medicament_ui *medicamentUI ;
+    GSLIVmainwindow *w;
+
 
 };
 #endif // MACLASSE_H

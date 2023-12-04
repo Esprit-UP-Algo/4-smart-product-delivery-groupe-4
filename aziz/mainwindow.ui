@@ -584,6 +584,19 @@
        <string>RFID</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_back">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>51</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>BACK</string>
+      </property>
+     </widget>
      <zorder>label_7</zorder>
      <zorder>pushButton_pdf</zorder>
      <zorder>tableView</zorder>
@@ -619,6 +632,7 @@
      <zorder>label_6</zorder>
      <zorder>lineEdit_RFID</zorder>
      <zorder>label_8</zorder>
+     <zorder>pushButton_back</zorder>
     </widget>
    </widget>
   </widget>

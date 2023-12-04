@@ -16,8 +16,11 @@ CONFIG += c++17
 
 SOURCES += \
     aziz/arduino.cpp \
+    hedy/connection.cpp \
+    hedy/gslivmainwindow.cpp \
+    hedy/livraisons.cpp \
+    hedy/smtp.cpp \
     main.cpp \
-    aziz/connection.cpp\
     aziz/employe.cpp\
     aziz/login.cpp\
     aziz/mainwindow.cpp\
@@ -28,13 +31,16 @@ SOURCES += \
 
 HEADERS += \
     aziz/arduino.h \
-    aziz/connection.h\
     aziz/employe.h\
     aziz/login.h\
     aziz/mainwindow.h\
     aziz/oublier.h\
     cherif/medicament_ui.h\
     cherif/Medicament.h\
+    hedy/connection.h \
+    hedy/gslivmainwindow.h \
+    hedy/livraisons.h \
+    hedy/smtp.h \
     widget.h
 
 FORMS += \
@@ -42,6 +48,7 @@ FORMS += \
     aziz/login.ui\
     aziz/oublier.ui\
     cherif/medicament_ui.ui\
+    hedy/gslivmainwindow.ui \
     widget.ui
 
 # Default rules for deployment.
@@ -58,3 +65,6 @@ DISTFILES += \
 RESOURCES += \
     cherif/res.qrc\
     aziz/image.qrc\
+
+DISTFILES += \
+    hedy/.gitignore

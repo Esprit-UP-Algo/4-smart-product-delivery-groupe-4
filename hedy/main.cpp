@@ -1,36 +1,35 @@
-#include "widget.h"
-#include "aziz/arduino.h"
+#include "gslivmainwindow.h"
 #include <QApplication>
-#include"aziz/login.h"
-#include"hedy/connection.h"
-#include"aziz/mainwindow.h"
 #include <QMessageBox>
-
+#include <iostream>
+#include<QDebug>
+#include "connection.h"
+#include "livraisons.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
-    employe e;
-    qDebug();
-
-
+    GSLIVmainwindow w;
     Connection c;
+    Livraisons L;
+    qDebug();
     bool test=c.createconnect();
-    login l;
-arduino A;
-    MainWindow w;
-    l.show();
     if(test)
-    {
-        /*QMessageBox::critical(nullptr, QObject::tr("database is open"),
+    {w.show();
+        QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);*/
+                                "Click Cancel to exit."), QMessageBox::Cancel);
 
 }
     else
         QMessageBox::critical(nullptr, QObject::tr("database is not open"),
                     QObject::tr("connection failed.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
+
+
+
     return a.exec();
 }
+
+
+GSLIVmainwindow w;

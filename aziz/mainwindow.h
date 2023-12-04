@@ -50,6 +50,8 @@ private slots:
 
     void on_pushButton_deconect_clicked();
 
+    void on_pushButton_back_clicked();
+
 private:
     arduino A;
     Ui::MainWindow *ui;
