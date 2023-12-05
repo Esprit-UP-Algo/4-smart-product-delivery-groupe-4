@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ghalia/gh.jpg</file>
+        <file>ghalia/mmmmmmmmm.jpg</file>
+        <file>ghalia/babababa.png</file>
+        <file>ghalia/gggg.png</file>
+    </qresource>
+</RCC>

@@ -11,11 +11,12 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSystemTrayIcon>
-
+#include <QDesktopServices>
+#include <QUrl>
 #include <QtCharts/QChartView>
 #include <QtCharts/QPieSeries>
 #include <QtCharts/QPieSlice>
-
+#include <QFileDialog>
 
 Medicament_ui::Medicament_ui(QWidget *parent) :
     QDialog(parent),
@@ -423,3 +424,49 @@ void Medicament_ui::on_pushButton_afficher_peremption_clicked()
     model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
     // ... Définissez les en-têtes pour d'autres colonnes
 }
+
+
+void Medicament_ui::on_pushButton_4_clicked()
+{ QString medicationName = ui->medicationNameInput->text();
+    medicationName.replace(" ", "+");
+    QString drugsSearchUrl = "https://www.drugs.com/search.php?searchterm=" + medicationName;
+    QDesktopServices::openUrl(QUrl(drugsSearchUrl));
+
+
+
+}
+
+void Medicament_ui::on_pushButton_5_clicked()
+{
+
+
+            QString fileName = QFileDialog::getSaveFileName((QWidget*)0, "Export CSV", QString(), "*.csv");
+            if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".csv"); }
+
+            QFile file(fileName);
+            if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+                QTextStream out(&file);
+
+                // Set field alignment to right-align
+                out.setFieldAlignment(QTextStream::AlignRight);
+
+                // Set the field width for each column
+                out.setFieldWidth(15);
+
+                // write header row
+                out << "CODE"  <<   "NOM"   <<   " TYPE "  << "DATEPEREMPTION" << "PRIX" << "QTE" << "\n";
+
+                QSqlQuery q;
+                q.prepare("SELECT * FROM MEDICAMENT");
+                q.exec();
+
+                while (q.next()) {
+                    // format row data
+                    out << q.value(0).toString() << q.value(1).toString() << q.value(2).toString() << q.value(3).toString() << q.value(4).toString() << q.value(5).toString() << "\n";
+                }
+
+                file.close();
+            }
+
+}
+

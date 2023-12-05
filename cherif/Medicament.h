@@ -29,6 +29,7 @@ public:
     void setdateperemption(const QDate &dateNaissance);
     void setprix(const QString &prix);
     void setqte(int qte);
+    void create_excel();
 
     bool ajouter();
     static QSqlQueryModel* afficher();

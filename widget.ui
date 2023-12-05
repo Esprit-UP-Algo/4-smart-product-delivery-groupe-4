@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1244</width>
+    <height>723</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,11 +16,14 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>30</y>
-     <width>711</width>
-     <height>491</height>
+     <x>10</x>
+     <y>20</y>
+     <width>1221</width>
+     <height>681</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(170, 255, 127);</string>
    </property>
    <property name="title">
     <string>GroupBox</string>
@@ -28,11 +31,18 @@
    <widget class="QPushButton" name="pushButtonemp">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>121</y>
-      <width>181</width>
-      <height>121</height>
+      <x>460</x>
+      <y>200</y>
+      <width>381</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 170, 0);
+alternate-background-color: rgb(0, 170, 127);
+color: rgb(170, 255, 127);
+font: 63 18pt &quot;Cascadia Code SemiBold&quot;;
+</string>
     </property>
     <property name="text">
      <string>gestion employe</string>
@@ -41,11 +51,16 @@
    <widget class="QPushButton" name="pushButtonmedic">
     <property name="geometry">
      <rect>
-      <x>309</x>
-      <y>121</y>
-      <width>211</width>
-      <height>121</height>
+      <x>460</x>
+      <y>370</y>
+      <width>381</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 170, 0);
+color: rgb(170, 255, 127);
+font: 63 18pt &quot;Cascadia Code SemiBold&quot;;</string>
     </property>
     <property name="text">
      <string>gestion medicament</string>
@@ -54,14 +69,58 @@
    <widget class="QPushButton" name="pushButtonliv">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>297</y>
-      <width>251</width>
-      <height>111</height>
+      <x>460</x>
+      <y>280</y>
+      <width>381</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 170, 0);
+border-left-color: rgb(85, 255, 127);
+color: rgb(170, 255, 127);
+font: 63 18pt &quot;Cascadia Code SemiBold&quot;;</string>
     </property>
     <property name="text">
      <string>gestion livraisons</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_comm">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>450</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 170, 0);
+color: rgb(170, 255, 127);
+font: 63 18pt &quot;Cascadia Code SemiBold&quot;;</string>
+    </property>
+    <property name="text">
+     <string>gestion commandes </string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonemp_2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>120</y>
+      <width>381</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 170, 0);
+alternate-background-color: rgb(0, 170, 127);
+color: rgb(170, 255, 127);
+font: 63 18pt &quot;Cascadia Code SemiBold&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>gestion pharmacie</string>
     </property>
    </widget>
   </widget>

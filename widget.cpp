@@ -3,6 +3,8 @@
 #include "aziz/mainwindow.h"
 #include "cherif/medicament_ui.h"
 #include "hedy/gslivmainwindow.h"
+#include "ghalia/mainwindow_commande.h"
+#include "yosr/yosr/mainwindow_phar.h"
 
 
 MaClasse::MaClasse(QWidget *parent)
@@ -32,4 +34,16 @@ void MaClasse::on_pushButtonliv_clicked()
 {
     w = new GSLIVmainwindow(this);
     w->show();
+}
+
+void MaClasse::on_pushButton_comm_clicked()
+{
+    a= new MainWindow_commande(this);
+    a->show();
+}
+
+void MaClasse::on_pushButtonemp_2_clicked()
+{
+    c= new MainWindow_phar(this);
+    c->show();
 }

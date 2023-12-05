@@ -11,7 +11,7 @@ using namespace std;
 #include<QIntValidator>
 #include <QtDebug>
 #include <QString>
-
+#include "aziz/arduino.h"
 #include <QPieSeries>
 #include <QPieSlice>
 #include <QChart>
@@ -19,7 +19,8 @@ using namespace std;
 #include <QStackedWidget>
 #include <QtCharts>
 #include <QSqlQuery>
-
+#include <QSerialPort>
+#include <QSerialPortInfo>
 #include<QPrinter>
 #include<QPainter>
 #include<QPdfWriter>
@@ -45,6 +46,16 @@ GSLIVmainwindow::GSLIVmainwindow(QWidget *parent)
         ui->tablivraisons->setModel(proxyModel);
         ui->dateliv->setValidator(new QRegExpValidator(QRegExp("\\d{2}/\\d{2}/\\d{4}"),this));
         ui->dateliv_m->setValidator(new QRegExpValidator(QRegExp("\\d{2}/\\d{2}/\\d{4}"),this));
+        int ret=A.connect_arduino(); // lancer la connexion à arduino
+                        switch(ret){
+                        case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+                        break;
+                        case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+                        break;
+                        case(-1):qDebug() << "arduino is not available";
+                        }
+                        QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(updateLocation())); // permet de lancer
+                        //le slot update_label suite à la reception du signal readyRead (reception des données)
 
 
 }
@@ -309,6 +320,18 @@ void GSLIVmainwindow::mailSent(QString status)
 {
     if(status == "Message sent")
         QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+}
+void GSLIVmainwindow::updateLocation()
+{
+    data = A.read_from_arduino();
+    QString datastring = QString::fromUtf8(data);
+   qDebug() << "Data from Arduino: " << datastring;
+
+    // Mettez à jour les champs de l'interface Qt avec les données de localisation
+
+    // Exemple : Mettez à jour les labels de latitude et longitude dans l'interface
+    ui->Cordonnees->setText(datastring);
+
 }
 GSLIVmainwindow::~GSLIVmainwindow()
 {

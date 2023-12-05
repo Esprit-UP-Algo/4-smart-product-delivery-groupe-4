@@ -12,7 +12,7 @@
 #include <QSqlRecord>
 #include <QDateTime>
 #include <QDate>
-
+#include <QFileDialog>
 Medicament::Medicament()
 {
     code = 0;
@@ -286,3 +286,36 @@ QSqlQueryModel* Medicament::afficherPeremptionMoinsUnMois()
 
     return model;
 }
+void create_excel()
+    {
+        QString fileName = QFileDialog::getSaveFileName((QWidget*)0, "Export CSV", QString(), "*.csv");
+        if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".csv"); }
+
+        QFile file(fileName);
+        if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            QTextStream out(&file);
+
+            // write header row
+            out <<"CODE , Nom , type , DATEPEREMPTION , PRIX, QTE \n";
+
+            QSqlQuery q;
+            q.prepare("SELECT * FROM MEDICAMENT");
+            q.exec();
+
+            while (q.next()) {
+                // format row data as comma-separated values
+                QString rowData = QString("%1,%2,%3,%4,%5,%6\n")
+                    .arg(q.value(0).toString())
+                    .arg(q.value(1).toString())
+                    .arg(q.value(2).toString())
+                    .arg(q.value(3).toString())
+                    .arg(q.value(4).toString())
+                    .arg(q.value(5).toString());
+
+                // write row to file
+                out << rowData;
+            }
+
+            file.close();
+        }
+    }

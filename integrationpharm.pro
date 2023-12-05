@@ -16,7 +16,9 @@ CONFIG += c++17
 
 SOURCES += \
     aziz/arduino.cpp \
-    hedy/connection.cpp \
+    ghalia/commande.cpp \
+    ghalia/connexion.cpp \
+    ghalia/mainwindow_commande.cpp \
     hedy/gslivmainwindow.cpp \
     hedy/livraisons.cpp \
     hedy/smtp.cpp \
@@ -27,7 +29,13 @@ SOURCES += \
     aziz/oublier.cpp\
     cherif/medicament_ui.cpp\
     cherif/Medicament.cpp\
-    widget.cpp
+    widget.cpp \
+    yosr/yosr/mainwindow_phar.cpp \
+    yosr/yosr/pharmacie.cpp \
+    yosr/yosr/qrcode.cpp \
+    yosr/yosr/qrcodegeneratordemo.cpp \
+    yosr/yosr/qrcodegeneratorworker.cpp \
+    yosr/yosr/qrwidget.cpp
 
 HEADERS += \
     aziz/arduino.h \
@@ -37,19 +45,27 @@ HEADERS += \
     aziz/oublier.h\
     cherif/medicament_ui.h\
     cherif/Medicament.h\
-    hedy/connection.h \
+    ghalia/commande.h \
+    ghalia/connexion.h \
+    ghalia/mainwindow_commande.h \
     hedy/gslivmainwindow.h \
     hedy/livraisons.h \
     hedy/smtp.h \
-    widget.h
+    widget.h \
+    yosr/yosr/mainwindow_phar.h \
+    yosr/yosr/pharmacie.h \
+    yosr/yosr/qrcode.h \
+    yosr/yosr/qrwidget.h
 
 FORMS += \
     aziz/mainwindow.ui\
     aziz/login.ui\
     aziz/oublier.ui\
     cherif/medicament_ui.ui\
+    ghalia/mainwindow_commande.ui \
     hedy/gslivmainwindow.ui \
-    widget.ui
+    widget.ui \
+    yosr/yosr/mainwindow_phar.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -60,11 +76,16 @@ SUBDIRS += \
     cherif/mohhamedddddd.pro\
 DISTFILES += \
     aziz/PROJETQT1.pro.user\
-    cherif/mohhamedddddd.pro,user\
+    cherif/mohhamedddddd.pro,user\ \
+    ghalia/inte.pro \
+    yosr/yosr/integ.pro
 
 RESOURCES += \
     cherif/res.qrc\
     aziz/image.qrc\
+    ghaluaa.qrc \
+
 
 DISTFILES += \
+    ghalia/.gitignore \
     hedy/.gitignore

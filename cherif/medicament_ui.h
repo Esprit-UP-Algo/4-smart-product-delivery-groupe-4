@@ -35,6 +35,9 @@ private slots :
    void verifierQuantiteFaible();
    void on_pushButton_afficher_peremption_clicked();
 
+   void on_pushButton_3_clicked();
+   void on_pushButton_4_clicked();
+   void on_pushButton_5_clicked();
 };
 
 #endif // MEDICAMENT_UI_H

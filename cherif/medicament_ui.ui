@@ -111,7 +111,7 @@
 background-color: #FFCEE6;</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab1">
        <property name="styleSheet">
@@ -375,7 +375,7 @@ background-color: #FFCEE6;</string>
               <widget class="QTableView" name="tableView"/>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,5">
+              <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
                <item>
                 <layout class="QVBoxLayout" name="verticalLayout_6">
                  <item>
@@ -417,7 +417,7 @@ background-color: #FFCEE6;</string>
                 </layout>
                </item>
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0,0">
+                <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0,0,0,0">
                  <item alignment="Qt::AlignHCenter">
                   <widget class="QWidget" name="horizontalWidget_6" native="true">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -528,6 +528,23 @@ background-color: #FFCEE6;</string>
                    </property>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_4">
+                   <property name="text">
+                    <string>Informations de medicament par nom</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="medicationNameInput">
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(85, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </item>
               </layout>
@@ -574,6 +591,13 @@ background-color: #FFCEE6;</string>
              <property name="bottomMargin">
               <number>150</number>
              </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_5">
+               <property name="text">
+                <string>excel</string>
+               </property>
+              </widget>
+             </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_11">
                <item>

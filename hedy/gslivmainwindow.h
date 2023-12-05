@@ -3,7 +3,7 @@
 #include "livraisons.h"
 #include <QSortFilterProxyModel>
 #include <QHeaderView>
-
+#include "aziz/arduino.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -32,10 +32,14 @@ private slots:
     void on_pb_pdf_21_clicked();
 
     void on_pb_stat_21_clicked();
-    void sendMail();
-    void mailSent(QString);
-    void browse();
 
+    void sendMail();
+
+    void mailSent(QString);
+
+    void updateLocation();
+
+    void browse();
 
     void on_pushButton_back_clicked();
 
@@ -44,5 +48,7 @@ private:
     QStringList files;
     Livraisons L;
     QSortFilterProxyModel *proxyModel;
+    arduino A;
+    QByteArray data ;
 };
 #endif // GSLIVMAINWINDOW_H
