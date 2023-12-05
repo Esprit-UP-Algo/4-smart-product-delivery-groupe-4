@@ -18,8 +18,8 @@
     <rect>
      <x>80</x>
      <y>0</y>
-     <width>961</width>
-     <height>601</height>
+     <width>981</width>
+     <height>611</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
@@ -27,14 +27,41 @@
      <number>6</number>
     </property>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="0,10">
+     <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="0,0,10">
       <property name="rightMargin">
        <number>100</number>
       </property>
       <item>
        <widget class="QPushButton" name="pushButton_back">
         <property name="text">
-         <string>BACK</string>
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="res.qrc">
+          <normaloff>:/8633223.png</normaloff>:/8633223.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="res.qrc">
+          <normaloff>:/[removal.ai]_4a795b3c-6573-4a82-824a-c5bae773e993-logo.png</normaloff>:/[removal.ai]_4a795b3c-6573-4a82-824a-c5bae773e993-logo.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -56,7 +83,7 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 0, 255);</string>
+            <string notr="true">color: rgb(255, 138, 216);</string>
            </property>
            <property name="text">
             <string>Gestion des medicament</string>
@@ -80,7 +107,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(85, 255, 127);</string>
+       <string notr="true">color: rgb(0, 150, 255);
+background-color: #FFCEE6;</string>
       </property>
       <property name="currentIndex">
        <number>1</number>
@@ -102,7 +130,7 @@
          </rect>
         </property>
         <property name="title">
-         <string>Ajout</string>
+         <string/>
         </property>
         <widget class="QWidget" name="horizontalWidget" native="true">
          <property name="geometry">
@@ -131,7 +159,11 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QLineEdit" name="iDLineEdit"/>
+              <widget class="QLineEdit" name="iDLineEdit">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+              </widget>
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="prNomLabel">
@@ -200,12 +232,32 @@
                <property name="text">
                 <string>Ajouter</string>
                </property>
+               <property name="icon">
+                <iconset resource="res.qrc">
+                 <normaloff>:/2749768.png</normaloff>:/2749768.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="pushButton_modifier">
                <property name="text">
                 <string>Modifier</string>
+               </property>
+               <property name="icon">
+                <iconset resource="res.qrc">
+                 <normaloff>:/3829311.png</normaloff>:/3829311.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
                </property>
               </widget>
              </item>
@@ -230,7 +282,7 @@
          </rect>
         </property>
         <property name="title">
-         <string>Affichage Medicament</string>
+         <string/>
         </property>
         <widget class="QWidget" name="horizontalWidget_3" native="true">
          <property name="geometry">
@@ -245,7 +297,7 @@
           <item>
            <widget class="QWidget" name="verticalWidget_3" native="true">
             <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,5,4">
-             <item alignment="Qt::AlignHCenter">
+             <item>
               <widget class="QWidget" name="horizontalWidget_4" native="true">
                <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,0,0">
                 <property name="spacing">
@@ -254,19 +306,56 @@
                 <item>
                  <widget class="QPushButton" name="pushButton_stats">
                   <property name="text">
-                   <string>Stats</string>
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="res.qrc">
+                    <normaloff>:/1549880.png</normaloff>:/1549880.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>30</width>
+                    <height>30</height>
+                   </size>
                   </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QPushButton" name="pushButton_refresh">
                   <property name="text">
-                   <string>REFRESH</string>
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="res.qrc">
+                    <normaloff>:/3829300.png</normaloff>:/3829300.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>30</width>
+                    <height>40</height>
+                   </size>
                   </property>
                  </widget>
                 </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_9">
+                  <item>
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="res.qrc">
+                      <normaloff>:/3829187.png</normaloff>:/3829187.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>30</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
                   <item>
                    <widget class="QLabel" name="label_2">
                     <property name="text">
@@ -308,7 +397,17 @@
                     <item>
                      <widget class="QPushButton" name="pushButton_pdf">
                       <property name="text">
-                       <string>PDF</string>
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="res.qrc">
+                        <normaloff>:/8263215.png</normaloff>:/8263215.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>50</width>
+                        <height>50</height>
+                       </size>
                       </property>
                      </widget>
                     </item>
@@ -318,13 +417,30 @@
                 </layout>
                </item>
                <item>
-                <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0,2">
+                <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,0,0">
                  <item alignment="Qt::AlignHCenter">
                   <widget class="QWidget" name="horizontalWidget_6" native="true">
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
                     <property name="spacing">
                      <number>15</number>
                     </property>
+                    <item>
+                     <widget class="QPushButton" name="pushButton_2">
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="res.qrc">
+                        <normaloff>:/9413329.png</normaloff>:/9413329.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
                     <item>
                      <widget class="QLabel" name="label_4">
                       <property name="text">
@@ -357,13 +473,6 @@
                      </widget>
                     </item>
                    </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="pushButton_afficher_peremption">
-                   <property name="text">
-                    <string>les medicament a bientot expiré </string>
-                   </property>
                   </widget>
                  </item>
                  <item>
@@ -410,6 +519,13 @@
                      </layout>
                     </item>
                    </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_afficher_peremption">
+                   <property name="text">
+                    <string>Afiicher les medicament perimés</string>
+                   </property>
                   </widget>
                  </item>
                 </layout>
@@ -462,6 +578,9 @@
               <layout class="QHBoxLayout" name="horizontalLayout_11">
                <item>
                 <widget class="QLabel" name="label_6">
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(122, 129, 255);</string>
+                 </property>
                  <property name="text">
                   <string>code medicament : </string>
                  </property>
@@ -475,7 +594,17 @@
              <item>
               <widget class="QPushButton" name="pushButton_supprimer">
                <property name="text">
-                <string>Supprimer</string>
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="res.qrc">
+                 <normaloff>:/3829228.png</normaloff>:/3829228.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
                </property>
               </widget>
              </item>
@@ -486,16 +615,34 @@
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab4">
-       <attribute name="title">
-        <string>Alerte Expiration</string>
-       </attribute>
-      </widget>
      </widget>
     </item>
    </layout>
   </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1101</width>
+     <height>641</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="res.qrc">:/7283494.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_7</zorder>
+  <zorder>verticalWidget</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

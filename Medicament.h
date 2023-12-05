@@ -35,7 +35,7 @@ public:
     static bool supprimer(int code);
     static Medicament findBycode(int code);
     bool modifier();
-    bool Vide();
+    bool QuantiteFaible();
     static void imprimer(int code);
     static QSqlQueryModel* trie(QString croissance, QString critere);
     static QHash<QString, int> getqteTypeDistribution();

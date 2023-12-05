@@ -1,5 +1,16 @@
 <RCC>
     <qresource prefix="/">
         <file>myappico.png</file>
+        <file>3829228.png</file>
+        <file>[removal.ai]_4a795b3c-6573-4a82-824a-c5bae773e993-logo.png</file>
+        <file>1549880.png</file>
+        <file>2749768.png</file>
+        <file>3829187.png</file>
+        <file>3829300.png</file>
+        <file>3829311.png</file>
+        <file>8633223.png</file>
+        <file>8263215.png</file>
+        <file>9413329.png</file>
+        <file>7283494.jpg</file>
     </qresource>
 </RCC>

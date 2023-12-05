@@ -2,7 +2,7 @@
 #include "ui_medicament_ui.h"
 #include "Medicament.h"
 #include "mainwindow.h"
-
+#include"widget.h"
 #include <QDebug>
 #include <QMainWindow>
 #include <QMessageBox>
@@ -25,7 +25,7 @@ Medicament_ui::Medicament_ui(QWidget *parent) :
     mSystemTrayIcon = new QSystemTrayIcon(this);
     mSystemTrayIcon->setIcon(QIcon(":/myappico.png"));
     mSystemTrayIcon->setVisible(true);
-    verifierTableVide();
+    verifierQuantiteFaible();
     ui->iDLineEdit->setValidator(new QIntValidator(0, 999999, this)); // only input int
     ui->prNomLineEdit->setValidator(new QRegExpValidator(QRegExp("[a-zA-Z]+"), this)); // only input int
     ui->nomLineEdit->setValidator(new QRegExpValidator(QRegExp("[a-zA-Z]+"), this)); // only input alphabetic characters
@@ -41,8 +41,8 @@ Medicament_ui::~Medicament_ui()
 }
 void Medicament_ui::on_pushButton_back_clicked()
 {
-    MainWindow *MainWindowDialog = new MainWindow();
-    MainWindowDialog->show();
+    MaClasse *ui = new MaClasse();
+    ui->show();
 
     close();
 }
@@ -61,7 +61,7 @@ void Medicament_ui::on_pushButton_ajout_clicked()
         QMessageBox::critical(nullptr, QObject::tr("Ajout Medicament"),
                     QObject::tr("Medicament non ajouté. code invalide.\n"
                                 "Cliquer quitter."), QMessageBox::Cancel);
-        return;
+        return ;
     }
 
     if (type.isEmpty()) {
@@ -340,42 +340,86 @@ void Medicament_ui::on_search_field_textChanged(const QString &arg1)
         qDebug() << "Query execution failed: " << query.lastError();
     }
 }
+void Medicament_ui::on_pushButton_stats_clicked() {
+    // Create a data model for the pie chart
+    QtCharts::QPieSeries *series = new QtCharts::QPieSeries();
 
-void Medicament_ui::on_pushButton_stats_clicked()
-{
-    // Créez un modèle de données pour le graphique circulaire
-        QtCharts::QPieSeries *series = new QtCharts::QPieSeries();
+    // Fetch medication type distribution data from your database
+    QHash<QString, int> Distribution = Medicament::getqteTypeDistribution();
 
-        // Ajoutez des tranches (slices) pour chaque groupe d'âge
-        // Vous devrez obtenir les données de votre base de données ici
-        // Par exemple, supposons que vous ayez une fonction "getAgeDistribution()" qui renvoie un QHash<QString, int>
-        QHash<QString, int> Distribution = Medicament::getqteTypeDistribution();
+    int totalMedicaments = 0;
+    for (int value : Distribution.values()) {
+        totalMedicaments += value;
+    }
 
-        for (const QString &Group : Distribution.keys()) {
-            QtCharts::QPieSlice *slice = series->append(Group, Distribution.value(Group));
-            // Vous pouvez personnaliser l'apparence de chaque tranche si vous le souhaitez
-        }
+    for (const QString &Group : Distribution.keys()) {
+        int count = Distribution.value(Group);
+        double percentage = 100.0 * count / totalMedicaments; // Calculate the percentage
 
-        // Créez un graphique circulaire et configurez-le
-        QtCharts::QChart *chart = new QtCharts::QChart();
-        chart->addSeries(series);
-        chart->setTitle("Répartition par Niveau");
+        // Append a slice to the pie chart with the medication type and percentage
+        QString label = QString("%1\n%2%").arg(Group).arg(QString::number(percentage, 'f', 1));
+        QtCharts::QPieSlice *slice = series->append(label, count);
+        slice->setLabelVisible();
+        slice->setLabelPosition(QtCharts::QPieSlice::LabelOutside); // Position the label outside the slice
+        slice->setLabelColor(Qt::black); // Set label color if needed
 
-        // Créez une vue de graphique pour afficher le graphique circulaire
-        QtCharts::QChartView *chartView = new QtCharts::QChartView(chart);
-        chartView->setRenderHint(QPainter::Antialiasing);
+        // Set font size for the labels
+        QFont font = slice->labelFont();
+        font.setPointSize(12); // Set the desired font size here (change 12 to the preferred size)
+        slice->setLabelFont(font);
 
-        // Affichez la vue du graphique dans une nouvelle fenêtre
-        QMainWindow *chartWindow = new QMainWindow(this);
-        chartWindow->setCentralWidget(chartView);
-        chartWindow->resize(800, 600);
-        chartWindow->show();
+        // Customize the appearance of each slice if needed
+    }
+
+    // Create and configure the pie chart
+    QtCharts::QChart *chart = new QtCharts::QChart();
+    chart->addSeries(series);
+    chart->setTitle("Répartition par Niveau");
+
+    // Create a chart view to display the pie chart
+    QtCharts::QChartView *chartView = new QtCharts::QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+
+    // Display the chart view in a new window
+    QMainWindow *chartWindow = new QMainWindow(this);
+    chartWindow->setCentralWidget(chartView);
+    chartWindow->resize(800, 600);
+    chartWindow->show();
 }
 
-void Medicament_ui::verifierTableVide() {
+void Medicament_ui::verifierQuantiteFaible() {
     Medicament medicament;
-            if (medicament.Vide()) {
-                mSystemTrayIcon->showMessage(tr("WARNING"),
-                                             tr("Pas des medicaments disponibles pour le moument."));
-       }
+    if (medicament.QuantiteFaible()) {
+        QSqlQuery lowQuantityQuery;
+        lowQuantityQuery.prepare("SELECT nom, Code FROM MEDICAMENT WHERE QTE < 100");
+        if (lowQuantityQuery.exec()) {
+            QString message = tr("\n");
+
+            while (lowQuantityQuery.next()) {
+                QString nomMedicament = lowQuantityQuery.value(0).toString();
+                QString codeMedicament = lowQuantityQuery.value(1).toString();
+                message += "Code: " + codeMedicament + " - Nom: " + nomMedicament + "\n";
+            }
+
+            mSystemTrayIcon->showMessage(tr("Quantité Faible <100 : "), message);
+        } else {
+            qDebug() << "Error executing query: " << lowQuantityQuery.lastError().text();
+        }
+    }
+}
+
+
+
+void Medicament_ui::on_pushButton_afficher_peremption_clicked()
+{
+    // Appel de la fonction pour obtenir les médicaments dont la date de péremption est inférieure à un mois
+    QSqlQueryModel* model = Medicament::afficherPeremptionMoinsUnMois();
+
+    // Mettez à jour le modèle de la table avec les résultats de la requête
+    ui->tableView->setModel(model);
+
+    // Vous pouvez également définir les en-têtes de colonnes si nécessaire
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("code"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+    // ... Définissez les en-têtes pour d'autres colonnes
 }

@@ -32,7 +32,8 @@ private slots :
    void on_pushButton_pdf_clicked();
    void on_tableView_activated(const QModelIndex &index);
    void on_pushButton_stats_clicked();
-   void verifierTableVide();
+   void verifierQuantiteFaible();
+   void on_pushButton_afficher_peremption_clicked();
 
 };
 

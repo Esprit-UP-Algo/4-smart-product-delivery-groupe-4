@@ -246,17 +246,19 @@ QHash<QString, int> Medicament::getqteTypeDistribution()
 
     return qteTypeDistribution;
 }
-bool Medicament::Vide() {
+bool Medicament::QuantiteFaible() {
     QSqlQuery query;
-    query.prepare("SELECT COUNT(*) FROM MEDICAMENT");
+    query.prepare("SELECT COUNT(*) FROM MEDICAMENT WHERE QTE < 100");
     if (query.exec() && query.next()) {
-        int rowCount = query.value(0).toInt();
-        return rowCount == 0;
+        int lowQuantityCount = query.value(0).toInt();
+        if (lowQuantityCount > 0) {
+            return true; // At least one medication has quantity < 100
+        }
     }
-    return false; // En cas d'erreur ou autre problème
+    return false; // In case of error or no medication with quantity < 100
 }
 
-// ... Autres inclus
+
 
 QSqlQueryModel* Medicament::afficherPeremptionMoinsUnMois()
 {
