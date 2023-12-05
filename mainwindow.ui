@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1222</width>
+    <height>634</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>581</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>client</string>
+    </property>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>502</width>
+       <height>1581</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> QString styleSheet = &quot;QMenuBar{background: qlineargradient(x1:0,x2:0,y1:0,y2:1,stop:0 #cccccc, stop:0.4 gray)} QStatusBar{background: qlineargradient(x1:0,x2:0,y1:0,y2:1,stop:0 #cccccc, stop:0.4 gray);color:white;} &quot;;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+
+this-&gt;setStyleSheet(styleSheet);
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="widget">
+      <attribute name="title">
+       <string>Afficher</string>
+      </attribute>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>110</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+       </property>
+       <property name="text">
+        <string>nom_phar</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="nom_pha">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>110</y>
+         <width>231</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>140</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+       </property>
+       <property name="text">
+        <string>HORAIRE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="hor_pha">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>140</y>
+         <width>231</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>170</y>
+         <width>56</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ADRESSE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="ad_pha">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>170</y>
+         <width>231</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ajout">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>460</y>
+         <width>111</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+       </property>
+       <property name="text">
+        <string>ajouter</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../Downloads/ajouter.png</normaloff>../../../../Downloads/ajouter.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="modifier">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>460</y>
+         <width>111</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+       </property>
+       <property name="text">
+        <string>modifier</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../Downloads/modifier.png</normaloff>../../../../Downloads/modifier.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>-90</x>
+         <y>-80</y>
+         <width>711</width>
+         <height>612</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../Desktop/teeest.jpg</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>-20</y>
+         <width>531</width>
+         <height>521</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../projet phar/teeest.jpg</pixmap>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="num_pha">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>200</y>
+         <width>231</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>200</y>
+         <width>56</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+       </property>
+       <property name="text">
+        <string>num</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>0</y>
+         <width>81</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../Downloads/traduction.png</normaloff>../../../../Downloads/traduction.png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="supprimer">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>460</y>
+         <width>111</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+       </property>
+       <property name="text">
+        <string>supprimer</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../Downloads/suprimer.png</normaloff>../../../../Downloads/suprimer.png</iconset>
+       </property>
+      </widget>
+      <widget class="QTableView" name="tableView">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>250</y>
+         <width>411</width>
+         <height>192</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>-30</y>
+         <width>671</width>
+         <height>591</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../Downloads/teeest.jpg</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>91</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="id_pha">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>80</y>
+         <width>231</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="PDF">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>130</y>
+         <width>81</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../Downloads/suprimer.png</normaloff>../../../../Downloads/suprimer.png</iconset>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>73</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Nom</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="search">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>113</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <zorder>label_10</zorder>
+      <zorder>label_7</zorder>
+      <zorder>label_6</zorder>
+      <zorder>label</zorder>
+      <zorder>nom_pha</zorder>
+      <zorder>label_2</zorder>
+      <zorder>hor_pha</zorder>
+      <zorder>label_3</zorder>
+      <zorder>ad_pha</zorder>
+      <zorder>ajout</zorder>
+      <zorder>modifier</zorder>
+      <zorder>num_pha</zorder>
+      <zorder>label_5</zorder>
+      <zorder>pushButton_16</zorder>
+      <zorder>supprimer</zorder>
+      <zorder>tableView</zorder>
+      <zorder>label_4</zorder>
+      <zorder>id_pha</zorder>
+      <zorder>PDF</zorder>
+      <zorder>comboBox</zorder>
+      <zorder>search</zorder>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Statistiques</string>
+      </attribute>
+      <widget class="QFrame" name="frame_stat">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>130</y>
+         <width>471</width>
+         <height>281</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="stat_butt">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>50</y>
+         <width>81</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+       </property>
+       <property name="text">
+        <string>statistique</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../../Downloads/statt.jpg</normaloff>../../../../Downloads/statt.jpg</iconset>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>570</x>
+       <y>350</y>
+       <width>221</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>client</string>
+     </property>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>361</x>
+        <y>150</y>
+        <width>141</width>
+        <height>1431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QString styleSheet = &quot;QMenuBar{background: qlineargradient(x1:0,x2:0,y1:0,y2:1,stop:0 #cccccc, stop:0.4 gray)} QStatusBar{background: qlineargradient(x1:0,x2:0,y1:0,y2:1,stop:0 #cccccc, stop:0.4 gray);color:white;} &quot;;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+
+this-&gt;setStyleSheet(styleSheet);
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="widget_2">
+       <attribute name="title">
+        <string>Afficher</string>
+       </attribute>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>110</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+        </property>
+        <property name="text">
+         <string>nom_phar</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="nom_pha_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>110</y>
+          <width>231</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>140</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+        </property>
+        <property name="text">
+         <string>HORAIRE</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="hor_pha_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>140</y>
+          <width>231</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>170</y>
+          <width>56</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+        </property>
+        <property name="text">
+         <string>ADRESSE</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="ad_pha_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>170</y>
+          <width>231</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ajout_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>460</y>
+          <width>111</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+        </property>
+        <property name="text">
+         <string>ajouter</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../../Downloads/ajouter.png</normaloff>../../../../Downloads/ajouter.png</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifier_2">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>460</y>
+          <width>111</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+        </property>
+        <property name="text">
+         <string>modifier</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../../Downloads/modifier.png</normaloff>../../../../Downloads/modifier.png</iconset>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="num_pha_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>200</y>
+          <width>231</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>200</y>
+          <width>56</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+        </property>
+        <property name="text">
+         <string>num</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>0</y>
+          <width>81</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../../Downloads/traduction.png</normaloff>../../../../Downloads/traduction.png</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="supprimer_2">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>460</y>
+          <width>111</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+        </property>
+        <property name="text">
+         <string>supprimer</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../../Downloads/suprimer.png</normaloff>../../../../Downloads/suprimer.png</iconset>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tableView_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>250</y>
+          <width>411</width>
+          <height>192</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>80</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+font: 9pt &quot;MV Boli&quot;;</string>
+        </property>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="id_pha_2">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>80</y>
+          <width>231</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1 solid white;
+border-radius: 5px;
+background-color:rgba(0,0,0,15%);</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="PDF_2">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>130</y>
+          <width>81</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+        </property>
+        <property name="text">
+         <string>PDF</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../../Downloads/suprimer.png</normaloff>../../../../Downloads/suprimer.png</iconset>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>10</y>
+          <width>73</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nom</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="search_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Statistiques</string>
+       </attribute>
+       <widget class="QFrame" name="frame_stat_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>130</y>
+          <width>471</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="stat_butt_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>50</y>
+          <width>81</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color:rgba(0,0,0,50%);
+color:white;
+border:1 solid white;
+border-radius: 5px;
+}
+QPushButton:hover{
+background-color:rgb(170, 255, 255);
+color:black;
+}</string>
+        </property>
+        <property name="text">
+         <string>statistique</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../../Downloads/statt.jpg</normaloff>../../../../Downloads/statt.jpg</iconset>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="QRCODE_4">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>480</y>
+       <width>121</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="QR_2">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>600</y>
+       <width>121</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>generate qr code</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="QR">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>400</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>generate qr code</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="QRCODE_3">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>280</y>
+      <width>121</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>70</y>
+      <width>711</width>
+      <height>612</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../Desktop/teeest.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>150</y>
+      <width>531</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../projet phar/teeest.jpg</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1222</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
